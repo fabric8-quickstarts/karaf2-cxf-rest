@@ -33,7 +33,7 @@
 
     <!-- configure the versions you want to use here -->
     <fuse.version>6.2.1.redhat-117</fuse.version>
-    <fabric8.version>2.2.150</fabric8.version>
+    <fabric8.version>2.2.155</fabric8.version>
     <cxf.plugin.version>3.1.4</cxf.plugin.version>
     <karaf.plugin.version>4.0.2.redhat-621079</karaf.plugin.version>
 
@@ -115,6 +115,13 @@
         </exclusion>
       </exclusions>
     </dependency>
+    <dependency>
+      <groupId>io.fabric8</groupId>
+      <artifactId>fabric8-karaf-features</artifactId>
+      <version>${fabric8.version}</version>
+      <classifier>features</classifier>
+      <type>xml</type>
+    </dependency>    
 
   </dependencies>
 
@@ -293,6 +300,8 @@
             <feature>http</feature>
             <feature>cxf-specs</feature>
             <feature>swagger2</feature>
+            
+            <feature>fabric8-karaf-checks</feature>
           </startupFeatures>
           <startupBundles>
             <bundle>mvn:${project.groupId}/${project.artifactId}/${project.version}</bundle>
