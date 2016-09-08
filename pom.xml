@@ -115,6 +115,13 @@
         </exclusion>
       </exclusions>
     </dependency>
+    <dependency>
+      <groupId>io.fabric8</groupId>
+      <artifactId>fabric8-karaf-features</artifactId>
+      <version>${fabric8.version}</version>
+      <classifier>features</classifier>
+      <type>xml</type>
+    </dependency>
 
   </dependencies>
 
@@ -256,6 +263,7 @@
             <feature>aries-blueprint</feature>
             <feature>cxf-jaxrs</feature>
             <feature>cxf-rs-description-swagger2</feature>
+            <feature>fabric8-karaf-checks</feature>
           </startupFeatures>
           <startupBundles>
             <bundle>mvn:${project.groupId}/${project.artifactId}/${project.version}</bundle>
