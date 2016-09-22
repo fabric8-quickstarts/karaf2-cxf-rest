@@ -46,8 +46,7 @@ running pods, and view logs and much more.
 
 You can use any browser to perform a HTTP GET.  This allows you to very easily test a few of the RESTful services we defined:
 
-Notice: As it depends on your OpenShift setup, the hostname (route) might vary. Verify with `oc get routes` which
-hostname is valid for you
+Notice: As it depends on your OpenShift setup, the hostname (route) might vary. Verify with `oc get routes` which hostname is valid for you.  Add the '-Dfabric8.deploy.createExternalUrls=true' option to your maven commands if you want it to deploy a Route configuration for the service.
 
 Use this URL to display the root of the REST service, which also allows to access the WADL of the service:
 
