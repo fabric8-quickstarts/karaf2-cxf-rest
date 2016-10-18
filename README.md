@@ -1,4 +1,4 @@
-# Karaf CXF REST QuickStart
+# Karaf 2 CXF REST QuickStart
 
 This quickstart demonstrates how to create a RESTful (JAX-RS) web service using CXF and expose it through the OSGi HTTP Service.
 
