@@ -56,7 +56,7 @@ Use this URL to display the XML representation for customer 123:
 
     http://quickstart-cxf-rest.vagrant.f8/cxf/crm/customerservice/customers/123
 
-You can also access the XML representation for order 223 ...
+You can also access the XML representation for order 123 ...
 
     http://quickstart-cxf-rest.f8/cxf/crm/customerservice/customers/123
 
@@ -67,7 +67,7 @@ You can also access the XML representation for order 223 ...
 
 You can use a command-line utility, such as cURL or wget, to perform the HTTP requests.  We have provided a few files with sample XML representations in `src/test/resources`, so we will use those for testing our services.
 
-1. Open a command prompt and change directory to `cxf-cdi`.
+1. Open a command prompt and change directory to `karaf2-cxf-rest`.
 2. Run the following curl commands (curl commands may not be available on all platforms):
 
     * Create a customer
