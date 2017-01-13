@@ -20,7 +20,7 @@ The example can be built with
     mvn clean install
 
 
-### Running the example in fabric8
+### Running the example in OpenShift
 
 It is assumed that OpenShift platform is already running. If not you can find details how to [Install OpenShift at your site](https://docs.openshift.com/enterprise/3.1/install_config/install/index.html).
 
@@ -41,6 +41,20 @@ Then find the name of the pod that runs this quickstart, and output the logs fro
 You can also use the OpenShift [web console](https://docs.openshift.com/enterprise/3.1/getting_started/developers/developers_console.html#tutorial-video) to manage the
 running pods, and view logs and much more.
 
+
+### Running via an S2I Application Template
+
+Applicaiton templates allow you deploy applications to OpenShift by filling out a form in the OpenShift console that allows you to adjust deployment parameters.  This template uses an S2I source build so that it handle building and deploying the application for you.
+
+First, import the Fuse image streams:
+
+    oc create -f https://raw.githubusercontent.com/jboss-fuse/application-templates/fis-2.0.x.redhat/fis-image-streams.json
+
+Then create the quickstart template:
+
+    oc create -f https://raw.githubusercontent.com/jboss-fuse/application-templates/fis-2.0.x.redhat/quickstarts/karaf2-cxf-rest-template.json
+
+Now when you use "Add to Project" button in the OpenShift console, you should see a template for this quickstart. 
 
 ### Access services using a web browser
 
@@ -87,20 +101,4 @@ You can use a command-line utility, such as cURL or wget, to perform the HTTP re
              curl -X DELETE http://quickstart-cxf-rest.f8/cxf/crm/customerservice/customers/123
 
 
-### Running the example using OpenShift S2I template
-
-The example can also be built and run using the included S2I template quickstart-template.json.
-
-The application can be run directly by first editing the template file and populating S2I build parameters, including the required parameter GIT_REPO and then executing the command:
-
-    oc new-app -f quickstart-template.json
-
-Alternatively the template file can be used to create an OpenShift application template by executing the command:
-
-    oc create -f quickstart-template.json
-
-
-### More details
-
-You can find more details about running this [quickstart](http://fabric8.io/guide/quickstarts/running.html) on the website. This also includes instructions how to change the Docker image user and registry.
 
