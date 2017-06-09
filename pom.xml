@@ -32,7 +32,7 @@
     <version.maven-bundle-plugin>2.3.7</version.maven-bundle-plugin>
 
     <!-- configure the versions you want to use here -->
-    <fabric8.version>2.2.183</fabric8.version>
+    <fabric8.version>2.2.211</fabric8.version>
     <cxf.plugin.version>3.1.8</cxf.plugin.version>
     <karaf.plugin.version>4.0.7</karaf.plugin.version>
 
