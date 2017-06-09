@@ -32,7 +32,6 @@
     <version.maven-bundle-plugin>2.3.7</version.maven-bundle-plugin>
 
     <!-- configure the versions you want to use here -->
-    <fuse.version>6.3.0.redhat-187</fuse.version>
     <fabric8.version>2.2.183</fabric8.version>
     <cxf.plugin.version>3.1.8</cxf.plugin.version>
     <karaf.plugin.version>4.0.7</karaf.plugin.version>
@@ -46,7 +45,7 @@
 
   <dependencyManagement>
     <dependencies>
-      <!-- fabric8 bom must be before fabric8 bom -->
+      <!-- import fabric8 platform bom first -->
       <dependency>
         <groupId>io.fabric8</groupId>
         <artifactId>fabric8-project-bom-fuse-karaf</artifactId>
@@ -98,7 +97,6 @@
       and the feature repo itself is not added in etc/org.apache.karaf.features.cfg file -->
       <groupId>org.jboss.fuse</groupId>
       <artifactId>fuse-karaf-framework</artifactId>
-      <version>${fuse.version}</version>
       <type>kar</type>
       <!-- no need to download kar dependencies -->
       <exclusions>
