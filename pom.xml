@@ -32,12 +32,12 @@
     <version.maven-bundle-plugin>2.3.7</version.maven-bundle-plugin>
 
     <!-- configure the versions you want to use here -->
-    <fabric8.version>2.3.1</fabric8.version>
+    <fabric8.version>2.3.2</fabric8.version>
     <cxf.plugin.version>3.1.9</cxf.plugin.version>
     <karaf.plugin.version>4.0.8</karaf.plugin.version>
 
     <!-- maven plugin versions -->
-    <fabric8.maven.plugin.version>3.5.9</fabric8.maven.plugin.version>
+    <fabric8.maven.plugin.version>3.5.10</fabric8.maven.plugin.version>
     <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
     <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
     <exec-maven-plugin.version>1.5.0</exec-maven-plugin.version>
